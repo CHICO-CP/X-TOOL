@@ -8,7 +8,7 @@ const rl = readline.createInterface({
 });
 
 rl.question('𝐏𝐚𝐬𝐭𝐞 𝐄𝐧𝐜𝐫𝐲𝐩𝐭𝐢𝐨𝐧 𝐓𝐞𝐱𝐭 : ', (teks) => {
-  fs.writeFile('XX/MainDecrypt.tnl', teks, (error) => {
+  fs.writeFile('XX/MainDecrypt.nm', teks, (error) => {
     if (error) {
       console.error('Terjadi kesalahan saat menyimpan file:', error);
     } else {
@@ -19,7 +19,7 @@ rl.question('𝐏𝐚𝐬𝐭𝐞 𝐄𝐧𝐜𝐫𝐲𝐩𝐭𝐢𝐨𝐧 𝐓�
 });
 
 function runPythonScript() {
-  const command = 'python Main.py XX/MainDecrypt.tnl';
+  const command = 'python Main.py XX/MainDecrypt.nm';
   exec(command, (error, stdout, stderr) => {
     if (error) {
       console.log(`Error: ${error.message}`);
